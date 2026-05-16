@@ -18,19 +18,15 @@
  
 body {
     /* font-family: 'Roboto', Arial, sans-serif; è il font utilizzato per tutta la pagina se vuoi cambiarlo lo cambi da qui e non devi cercare nulla */
-
-
-
-
   font-family: 'Roboto', Arial, sans-serif;
-  background: ;var(--bg)
+  background: var(--bg);
   color: var(--text);
   min-height: 100vh; 
 }
  
  
 nav {
-   4. nav
+        /* /4. nav
 Corrisponde a: la barra nera in cima con logo, ricerca e pulsanti
 html<!-- in index.html -->
 <nav>
@@ -38,11 +34,9 @@ html<!-- in index.html -->
   <div class="search-bar">...</div>
   <div class="nav-actions">...</div>
 </nav> 
-
-
-
-<nav>
-  background: var(--navy);
+ */
+  
+background: var(--navy);
   padding: 8px 16px;
 
   display: flex;
