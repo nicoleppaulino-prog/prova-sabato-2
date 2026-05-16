@@ -30,7 +30,16 @@ body {
  
  
 nav {
-    
+   4. nav
+Corrisponde a: la barra nera in cima con logo, ricerca e pulsanti
+html<!-- in index.html -->
+<nav>
+  <div class="logo">amazon</div>
+  <div class="search-bar">...</div>
+  <div class="nav-actions">...</div>
+</nav> 
+
+
 
 <nav>
   background: var(--navy);
@@ -45,7 +54,11 @@ nav {
   z-index: 100;     /* sopra a tutti gli altri elementi */
 }
  
-/* Logo "amazon" */
+/* Logo "amazon" 5. .logo
+Corrisponde a: la scritta "amazon" arancione a sinistra nella navbar
+html<!-- in index.html -->
+<div class="logo">amazon</div>
+ */
 .logo {
   font-size: 28px;
   font-weight: 900;
@@ -54,7 +67,13 @@ nav {
   flex-shrink: 0; /* non si restringe mai */
 }
  
-/* Contenitore input + pulsante Cerca */
+/* Contenitore input + pulsante Cerca  6. .search-bar
+Corrisponde a: il rettangolo con bordo arancione con dentro il campo di ricerca e il pulsante Cerca
+html<!-- in index.html -->
+<div class="search-bar">
+  <input type="text" placeholder="Cerca prodotti…" />
+  <button>Cerca</button>
+</div>*/
 .search-bar {
   display: flex;
   flex: 1;          
@@ -69,7 +88,9 @@ nav {
   padding: 10px 14px;
   border: none;
   font-size: 14px;
-  outline: none;     /* rimuove il bordo blu del browser al focus */
+  outline: none;     
+  /* 7. .search-bar input
+Corrisponde a: il campo bianco dove scrivi cosa cercare*/
 }
  
 .search-bar button {
@@ -80,7 +101,8 @@ nav {
   font-weight: 700;
   cursor: pointer;
   color: var(--navy);
-  /* transition: proprietà durata timing */
+  /*8. .search-bar button
+Corrisponde a: il pulsante arancione "Cerca" a destra nella barra di ricerca */
   transition: background 0.15s;
 }
 .search-bar button:hover {
@@ -93,10 +115,23 @@ nav {
   gap: 100px;
   align-items: center;
   flex-shrink: 0;
-}
- 
-/* Pulsanti Account e Ordini */
+}/* Pulsanti Account e Ordini 9. .nav-actions
+Corrisponde a: il gruppo di pulsanti a destra nella navbar — Account, Ordini, Carrello
+html<!-- in index.html -->
+<div class="nav-actions">
+  <button class="nav-btn">Account</button>
+  <button class="nav-btn">Ordini</button>
+  <button class="cart-btn">Carrello (0)</button>
+</div>*/
+
+
+
+
 .nav-btn {
+
+/* 10. .nav-btn
+Corrisponde a: i pulsanti "Account" e "Ordini" — trasparenti con bordo */
+
   background: transparent;
   border: 1.5px solid rgba(255,255,255,0.35);
   color: #fff;
