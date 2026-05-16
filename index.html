@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazon,Le offerte di oggi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- Dice al browser di connettersi in anticipo a Google, non è obbligatorio metterlo  -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet" />
+   <!-- quessto serve per scaricare un font in particolare roboto se voglio posso cambiarlo basta che vado su google fonts e mi scarico il code e poi lo copio e lo incollo su linkhrfe   -->
+  <link rel="stylesheet" href="assets/css/style.css" /> <!--questo serve per collegare le diverse cartelle cosi poi si puo vedere tutto su live la stessa cosa si fa con js cartella e con file js <script src="assets/js/script.js"></script>  vine cosi!-->
+</head>
+<body>
+
+  <nav> <!-- la nav è la barra di navigazione che sta sempre sopra quasi ogni sito come se fosse una barra di ricerca e dentro torvi tante cose nomi logo, pulsanti . si deve mettere perche cosi aiuta google a capire la struttura della pagina è obbligatorio metterlo!-->
+    
+    <div class="logo">amazon</div> <!-- div è una scatola dove dentro ci puoi mettere  tante cose che prima erano un po confuse serve a raggrupare cose insieme, queste cose poi puoi trasformale se vuoi ma con CSS-->     <!-- ci sono tanti div che si differenziano dalla class ma in particolare dalla parola dentro ""  puoi cambiare la parola ogni volta che vuoi limportante e che poi la scrivi bene anche in css e jvs-->
+    <div class="search-bar">
+      <input type="text" placeholder="Cerca prodotti, categorie, brand…" /> <!-- input serve per scrivere e come uno spazio una barra dove puoi scrivere qualcosa come su google cerca ,questo tag si chiude da solo alla fine guarda! ci sono tanti altri tipi di input type quello per le password email numero ecc 
+      <input type="text">      → testo normale
+      <input type="password">  → password (mostra i pallini ●●●●)
+      <input type="email">     → email ti da errore se non metti   @
+     <input type="number">    → solo numeri non si riescono a scrivere le lettere accetta solo numeri
+     <input type="checkbox">  → casella da spuntare ✅ che puo essere on oopure off dipende da cosa scegli
+      
+      -->
+      <button>Cerca</button>  <!-- è un bottone che si clicca nella pagina -->
+    </div>
+    <div class="nav-actions">
+      <button class="nav-btn">Account</button>
+      <button class="nav-btn">Ordini</button>
+      <button class="cart-btn">Carrello (<span id="cartCount">0</span>)</button>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <h1>Le offerte di oggi</h1> <!--è il titolo principale quidni e scritto molto grande poi pero ci sono che h2(sottotitolo) h3(medio testo) h4 (normale) h5(piccolo) h6(piccolissimo)-->
+    <p>Sconti fino al 70% su elettronica, libri, casa e molto altro</p> <!--paragrafo serve per scrivere praticamnete tutto descrizioni, frasi speigazioni-->
+  </div>
+
+  <main> <!--e il contenitore del contenuto principale della pagina, e come se immaginassi un giornale le cose piu importanti quindi gli articole sono il main . la nav sarebbe la testata del giornale , il div e con dentro h1 il titolo principale, e importante perche google capisce che è il contenuto centrale quindi lo fa veddere meglio-->
+
+    <h2 class="section-title">Categorie</h2>
+    <div class="categories-grid">
+      <div class="cat-card">
+        <div class="cat-img elettronica">Elettronica</div>
+        <div class="cat-info"><strong>Elettronica</strong><a href="#">Scopri di più</a></div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-img libri">Libri</div>
+        <div class="cat-info"><strong>Libri</strong><a href="#">Scopri di più</a></div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-img abbigliamento">Abbigliamento</div>
+        <div class="cat-info"><strong>Abbigliamento</strong><a href="#">Scopri di più</a></div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-img casa">Casa</div>
+        <div class="cat-info"><strong>Casa</strong><a href="#">Scopri di più</a></div>
+      </div>
+    </div>
+
+    <h2 class="section-title">I più venduti</h2>
+    <div class="products-grid" id="productsGrid"></div>
+  </main>
+
+  <footer> <!-- e la parte infondo alla pagina di soloto contieen i dati i contatto la privacy i termini  le condizioni e le e anche i siti e il copywright-->
+
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>Chi siamo</h4>
+        <a href="#">Lavora con noi</a>
+        <a href="#">Investitori</a>
+        <a href="#">Sostenibilità</a>
+      </div>
+      <div class="footer-col">
+        <h4>Aiuto</h4>
+        <a href="#">Centro assistenza</a>
+        <a href="#">Spedizioni</a>
+        <a href="#">Resi e rimborsi</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connettiti</h4>
+       
+        <a href="#">Facebook</a> <!-- <a> è un link che cliccando ti porta da qualche parte puo essere un sito oppure una pagina di un sito oppure per ora nessuna destinazione e questo escritto da il simboloo del # 
+             un altro sito
+          <a href="https://www.google.com">Vai su Google</a>
+            una pagina del tuo sito 
+           <a href="prodotti.html">Vai ai prodotti</a>
+            nessuna destinazione (per ora) 
+           <a href="#">Cliccami</a> -->
+            
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast"></div> <!-- è la notifica --> 
+
+  <script src="assets/css/js/script.js"></script>
+</body>
+</html>

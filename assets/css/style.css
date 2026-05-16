@@ -1,0 +1,274 @@
+
+:root {
+    /* è il contenitore di tutta la pagina  cioe significa che se vuoi cambiare il colore arancio e di tutto un blocco lo cambi direttamente da qui enon devi cercare nulla */
+  --navy:         #131921;   /* sfondo navbar e footer scuro */
+  --navy-light:   #232f3e;   /* sfondo hero e footer più chiaro */
+  --orange:       #FF9900;   /* arancione Amazon classico */
+  --orange-btn:   #FFD814;   /* giallo del pulsante carrello */
+  --link:         #007185;   /* colore link (azzurro Amazon) */
+  --text:         #0F1111;   /* testo principale quasi-nero */
+  --bg:           #EAEDED;   /* sfondo grigio chiaro della pagina */
+  --card-bg:      #ffffff;   /* sfondo bianco delle schede */
+  --price:        #B12704;   /* rosso scuro del prezzo */
+  --radius:       10px;       /* arrotondamento degli angoli */
+}
+ 
+
+
+ 
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background: ;var(--bg)
+  color: var(--text);
+  min-height: 100vh; 
+}
+ 
+ 
+nav {
+  background: var(--navy);
+  padding: 8px 16px;
+
+  display: flex;
+  align-items: center; /* centra verticalmente */
+  gap: 12px;           /* spazio tra gli elementi */
+ 
+  position: sticky; /* rimane in cima allo scroll */
+  top: 0;
+  z-index: 100;     /* sopra a tutti gli altri elementi */
+}
+ 
+/* Logo "amazon" */
+.logo {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--orange);
+  font-family: Georgia, serif;
+  flex-shrink: 0; /* non si restringe mai */
+}
+ 
+/* Contenitore input + pulsante Cerca */
+.search-bar {
+  display: flex;
+  flex: 1;          
+    max-width: 800px;
+  border-radius: var(--radius);
+  overflow: hidden; 
+  border: 2px solid var(--orange);
+}
+ 
+.search-bar input {
+  flex: 1;
+  padding: 10px 14px;
+  border: none;
+  font-size: 14px;
+  outline: none;     /* rimuove il bordo blu del browser al focus */
+}
+ 
+.search-bar button {
+  background: var(--orange);
+  border: none;
+  padding: 0 18px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--navy);
+  /* transition: proprietà durata timing */
+  transition: background 0.15s;
+}
+.search-bar button:hover {
+  background: #e68900; /* arancione più scuro all'hover */
+}
+ 
+/* Gruppo pulsanti destra */
+.nav-actions {
+  display:inline ;
+  gap: 100px;
+  align-items: center;
+  flex-shrink: 0;
+}
+ 
+/* Pulsanti Account e Ordini */
+.nav-btn {
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  color: #fff;
+  padding: 7px 14px;
+  border-radius: var(--radius);
+  font-size: 13px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+
+.nav-btn:hover {
+  border-color: orange;
+  background:rgb(35, 9, 9);
+}
+/*nav-btn:hover è il colore che si vede quando chiacci  il pulsante account e ordini vicino al careelo
+
+
+
+/* Pulsante Carrello quello che sta sopra */
+.cart-btn {
+  background: var(--orange);
+  border: none;
+  color: var(--navy);
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.cart-btn:hover { background: #c67319; }
+/*questo è il colore del pulsante carrello quando ci passo sopra con il mouse*/
+
+.hero {
+ 
+  background: linear-gradient(135deg, var(--navy-light) 0%, #303f51 100%);
+  text-align: center;
+  padding: 56px 20px;
+  position: relative;
+  overflow: hidden;
+}
+ 
+.hero:before {
+  
+  position: absolute;
+  inset: 0;               /* equivale a top/right/bottom/left: 0 */
+  background: radial-gradient(
+    ellipse 70% 60% at 50% 50%,
+    rgba(255,153,0,0.10) 0%,
+    transparent 70%
+  );
+}
+ 
+.hero h1 {
+
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 900;
+  color: #fff;
+  position: relative; /* sopra il ::before */
+}
+ 
+.hero p {
+  margin-top: 12px;
+  font-size: clamp(14px, 2vw, 18px);
+  color: #ccc;
+  position: relative;
+}
+
+main {
+  max-width: 1300px;  /* larghezza massima */
+  margin: 0 auto;     /* centrato orizzontalmente */
+  padding: 32px 16px 48px;
+}
+ 
+/* Titolo di sezione I più venduti") */
+.section-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 18px;
+}
+   
+.categories-grid {    
+  /* CSS Grid: 4 colonne uguali */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 1fr = una frazione dello spazio */
+  gap: 16px;
+  margin-bottom: 48px;
+}
+ 
+
+.cat-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.cat-card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.14);
+  transform: translateY(-2px); /* si alza di 2px */
+}
+ 
+/* Immagine/colore della categoria */
+.cat-img {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 900;
+  color: #f8fafd;
+}
+ 
+/* Colori diversi per ogni categoria */
+.cat-img.elettronica   { background: #0b2442 }
+.cat-img.libri         { background: #ca5500; }
+.cat-img.abbigliamento { background: #146eb4; }
+.cat-img.casa          { background: #067d62; }
+ 
+/* Info sotto l'immagine */
+.cat-info { padding: 12px; }
+.cat-info strong { display: block; font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+.cat-info a {
+  font-size: 13px;
+  color: var(--link);
+  text-decoration: none;
+  font-weight: 600;
+}
+.cat-info a:hover { text-decoration: underline; }
+ 
+
+footer {
+  background: var(--navy-light);
+  color: #232f3e;
+  padding: 40px 20px;
+}
+ 
+.footer-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+ 
+.footer-col h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #232f3e;
+  margin-bottom: 14px;
+}
+ 
+.footer-col a {
+  display: block;      /* ogni link va a capo */
+  color: rgb(229, 238, 229);
+  font-size: 14px;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: color 0.15s;
+}
+.footer-col a:hover { color: var(--orange); }
+ 
+@media (max-width: 900px) {
+  .categories-grid,
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonne invece di 4 */
+  }
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+ 
+/* Mobile: max 580px */
+@media (max-width: 580px) {
+  .nav-btn { display: none; } 
+  .footer-inner {
+    grid-template-columns: 3fr; 
+  }
+}
