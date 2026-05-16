@@ -1,6 +1,6 @@
 
 :root {
-    /* è il contenitore di tutta la pagina  cioe significa che se vuoi cambiare il colore arancio e di tutto un blocco lo cambi direttamente da qui enon devi cercare nulla */
+    /* è il contenitore di tutta la pagina  cioe significa che se vuoi cambiare il colore arancio e di tutto un blocco lo cambi direttamente da qui enon devi cercare nulla sono i colori utilizzati per cambiare quelli di tutta la pagina */
   --navy:         #131921;   /* sfondo navbar e footer scuro */
   --navy-light:   #232f3e;   /* sfondo hero e footer più chiaro */
   --orange:       #FF9900;   /* arancione Amazon classico */
@@ -10,13 +10,18 @@
   --bg:           #EAEDED;   /* sfondo grigio chiaro della pagina */
   --card-bg:      #ffffff;   /* sfondo bianco delle schede */
   --price:        #B12704;   /* rosso scuro del prezzo */
-  --radius:       10px;       /* arrotondamento degli angoli */
+  --radius:       8px;       /* arrotondamento degli angoli */
 }
  
 
 
  
 body {
+    /* font-family: 'Roboto', Arial, sans-serif; è il font utilizzato per tutta la pagina se vuoi cambiarlo lo cambi da qui e non devi cercare nulla */
+
+
+
+
   font-family: 'Roboto', Arial, sans-serif;
   background: ;var(--bg)
   color: var(--text);
@@ -25,6 +30,9 @@ body {
  
  
 nav {
+    
+
+<nav>
   background: var(--navy);
   padding: 8px 16px;
 
@@ -125,6 +133,11 @@ nav {
 /*questo è il colore del pulsante carrello quando ci passo sopra con il mouse*/
 
 .hero {
+    /*Corrisponde a: il banner scuro grande con scritto "Le offerte di oggi"  <!-- in index.html -->
+<div class="hero">
+  <h1>Le offerte di oggi</h1>
+  <p>Sconti fino al 70%...</p>
+</div>*/
  
   background: linear-gradient(135deg, var(--navy-light) 0%, #303f51 100%);
   text-align: center;
@@ -134,7 +147,7 @@ nav {
 }
  
 .hero:before {
-  
+  /*  Corrisponde a: il bagliore arancione sfumato al centro dell'hero — non lo vedi chiaramente ma dà profondità*/
   position: absolute;
   inset: 0;               /* equivale a top/right/bottom/left: 0 */
   background: radial-gradient(
@@ -145,7 +158,8 @@ nav {
 }
  
 .hero h1 {
-
+/* Corrispondono a: "Le offerte di oggi" e "Sconti fino al 70%... vale lo stesso per .hero p,"
+css */
   font-size: clamp(28px, 5vw, 48px);
   font-weight: 900;
   color: #fff;
@@ -160,12 +174,15 @@ nav {
 }
 
 main {
-  max-width: 1300px;  /* larghezza massima */
-  margin: 0 auto;     /* centrato orizzontalmente */
+    /* Corrisponde a: il contenitore centrale che contiene le categorie */
+
+  max-width: 1300px;   
+  margin: 0 auto;       
   padding: 32px 16px 48px;
 }
  
-/* Titolo di sezione I più venduti") */
+/* Corrisponde a: la scritta "Categorie" in grassetto sopra le schede  html<!-- in index.html -->
+<h2 class="section-title">Categorie</h2>   */
 .section-title {
   font-size: 22px;
   font-weight: 800;
@@ -174,7 +191,14 @@ main {
 }
    
 .categories-grid {    
-  /* CSS Grid: 4 colonne uguali */
+  /*Corrisponde a: la riga con le 4 schede Elettronica, Libri, Abbigliamento, Casa
+html<!-- in index.html -->
+<div class="categories-grid">
+  <div class="cat-card">...</div>
+  <div class="cat-card">...</div>
+  <div class="cat-card">...</div>
+  <div class="cat-card">...</div>
+</div> */
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 1fr = una frazione dello spazio */
   gap: 16px;
@@ -183,6 +207,12 @@ main {
  
 
 .cat-card {
+   /* Corrisponde a: la singola scheda categoria — es. quella di Elettronica  */
+    
+
+
+
+
   background: var(--card-bg);
   border-radius: var(--radius);
   overflow: hidden;
@@ -192,11 +222,15 @@ main {
 }
 .cat-card:hover {
   box-shadow: 0 6px 20px rgba(0,0,0,0.14);
-  transform: translateY(-2px); /* si alza di 2px */
+  transform: translateY(-2px); 
 }
  
-/* Immagine/colore della categoria */
+
 .cat-img {
+/* Corrisponde a: il quadrato colorato con scritto "Elettronica", "Libri" ecc.
+html<!-- in index.html -->
+<div class="cat-img elettronica">Elettronica</div>  */
+
   height: 150px;
   display: flex;
   align-items: center;
@@ -212,7 +246,11 @@ main {
 .cat-img.abbigliamento { background: #146eb4; }
 .cat-img.casa          { background: #067d62; }
  
-/* Info sotto l'immagine */
+/* Corrisponde a: la parte bianca sotto il quadrato colorato con il nome e il link "Scopri di più"html<!-- in index.html -->
+<div class="cat-info">
+  <strong>Elettronica</strong>
+  <a href="#">Scopri di più</a>
+</div> */
 .cat-info { padding: 12px; }
 .cat-info strong { display: block; font-size: 15px; font-weight: 700; margin-bottom: 4px; }
 .cat-info a {
@@ -225,6 +263,8 @@ main {
  
 
 footer {
+    /* Corrisponde a: il footer in fondo alla pagina con i link e le informazioni di contatto , Corrisponde a: la barra scura in fondo con Chi siamo, Aiuto, Connettiti insieme a footer inner*/
+
   background: var(--navy-light);
   color: #232f3e;
   padding: 40px 20px;
@@ -245,8 +285,9 @@ footer {
   margin-bottom: 14px;
 }
  
-.footer-col a {
-  display: block;      /* ogni link va a capo */
+.footer-col a { 
+    
+display: block;      
   color: rgb(229, 238, 229);
   font-size: 14px;
   text-decoration: none;
@@ -256,16 +297,20 @@ footer {
 .footer-col a:hover { color: var(--orange); }
  
 @media (max-width: 900px) {
+  
+    /* Corrisponde a: la visualizzazione su schermi più piccoli come tablet e smartphone, in questo caso quando lo schermo è più piccolo di 900px le categorie e i prodotti si dispongono su 2 colonne invece di 4, e il footer si adatta a 2 colonne invece di 3 */
+  
+  
   .categories-grid,
   .products-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 colonne invece di 4 */
+    grid-template-columns: repeat(2, 1fr); 
   }
   .footer-inner {
     grid-template-columns: 1fr 1fr;
   }
 }
  
-/* Mobile: max 580px */
+
 @media (max-width: 580px) {
   .nav-btn { display: none; } 
   .footer-inner {
